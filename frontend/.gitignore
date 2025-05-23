@@ -8,9 +8,13 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.env.development
+.env.staging
 dist
 dist-ssr
 *.local
+
+
 
 # Editor directories and files
 .vscode/*
@@ -23,6 +27,3 @@ dist-ssr
 *.sln
 *.sw?
 
-
-.env.development
-.env.staging
