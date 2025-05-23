@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import SumsubWebSdk from "@sumsub/websdk-react";
+// import config from "../../../backend/config/index.js"
+
+// const BACKEND_URL = config.BACKEND_URL;
+const BACKEND_URL =import.meta.env.VITE_BACKEND_URL;
 
 function VerificationComponent({ userId }) {
   const [accessToken, setAccessToken] = useState(null);
 
   async function fetchToken() {
     try {
-      const response = await fetch("http://localhost:5075/get-token", {
+      const response = await fetch(`${BACKEND_URL}/get-token`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
